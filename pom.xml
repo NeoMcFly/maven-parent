@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>neomcfly.parent</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.17</version>
+	<version>1.18</version>
 	<packaging>pom</packaging>
 
 	<prerequisites>
@@ -64,6 +64,8 @@
 					<artifactId>jgitflow-maven-plugin</artifactId>
 					<version>1.0-m5.1</version>
 					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<updateDependencies>true</updateDependencies>
 						<flowInitContext>
 							<masterBranchName>master</masterBranchName>
 							<developBranchName>develop</developBranchName>
