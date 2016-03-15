@@ -3,8 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>neomcfly.parent</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.16</version>
+	<version>1.17</version>
 	<packaging>pom</packaging>
+
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
 
 	<properties>
 		<project.build.directory>target</project.build.directory>
@@ -12,7 +16,6 @@
 		<maven.build.timestamp.format>yyyyMMdd-HH:mm:ss</maven.build.timestamp.format>
 		<project.build.timestamp>${maven.build.timestamp}</project.build.timestamp>
 	</properties>
-
 	<distributionManagement>
 		<repository>
 			<id>mcfly-releases</id>
@@ -75,7 +78,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
+					<version>3.5.1</version>
 					<configuration>
 						<encoding>${project.build.sourceEncoding}</encoding>
 						<compilerVersion>1.7</compilerVersion>
@@ -86,7 +89,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.6</version>
+					<version>2.7</version>
 					<configuration>
 						<encoding>ISO-8859-1</encoding>
 					</configuration>
@@ -94,12 +97,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
+					<version>3.5</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
+					<version>2.6</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
