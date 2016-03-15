@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>neomcfly.parent</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.15</version>
+	<version>1.16</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -12,6 +12,17 @@
 		<maven.build.timestamp.format>yyyyMMdd-HH:mm:ss</maven.build.timestamp.format>
 		<project.build.timestamp>${maven.build.timestamp}</project.build.timestamp>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>mcfly-releases</id>
+			<url>http://nexus:8081/content/repositories/mcfly-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>mcfly-snapshots</id>
+			<url>http://nexus:8081/content/repositories/mcfly-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencyManagement>
 		<dependencies>
@@ -45,6 +56,22 @@
 
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>external.atlassian.jgitflow</groupId>
+					<artifactId>jgitflow-maven-plugin</artifactId>
+					<version>1.0-m5.1</version>
+					<configuration>
+						<flowInitContext>
+							<masterBranchName>master</masterBranchName>
+							<developBranchName>develop</developBranchName>
+							<featureBranchPrefix>feature-</featureBranchPrefix>
+							<releaseBranchPrefix>release-</releaseBranchPrefix>
+							<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+							<versionTagPrefix>version-</versionTagPrefix>
+						</flowInitContext>
+					</configuration>
+				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
