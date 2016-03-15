@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>neomcfly.parent</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.18</version>
+	<version>1.19</version>
 	<packaging>pom</packaging>
 
 	<prerequisites>
@@ -29,6 +29,15 @@
 
 	<dependencyManagement>
 		<dependencies>
+
+			<!-- ================ -->
+			<!-- === Standard === -->
+			<!-- ================ -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+			</dependency>
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
@@ -45,6 +54,10 @@
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>1.7.19</version>
 			</dependency>
+
+			<!-- ================ -->
+			<!-- ===   Test   === -->
+			<!-- ================ -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
